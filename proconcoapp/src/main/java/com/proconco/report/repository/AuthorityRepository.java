@@ -1,0 +1,10 @@
+package com.proconco.report.repository;
+
+import com.proconco.report.domain.Authority;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * Spring Data JPA repository for the Authority entity.
+ */
+public interface AuthorityRepository extends JpaRepository<Authority, String> {
+}

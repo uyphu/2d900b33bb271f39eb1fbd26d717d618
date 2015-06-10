@@ -1,0 +1,77 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "grpName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "GrpName",
+            "fieldNameUnderscored": "grp_name",
+            "fieldInJavaBeanMethod": "GrpName",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "delFlag",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DelFlag",
+            "fieldNameUnderscored": "del_flag",
+            "fieldInJavaBeanMethod": "DelFlag",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "crtUid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CrtUid",
+            "fieldNameUnderscored": "crt_uid",
+            "fieldInJavaBeanMethod": "CrtUid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "crtTms",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "CrtTms",
+            "fieldNameUnderscored": "crt_tms",
+            "fieldInJavaBeanMethod": "CrtTms",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "updUid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "UpdUid",
+            "fieldNameUnderscored": "upd_uid",
+            "fieldInJavaBeanMethod": "UpdUid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "updTms",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "UpdTms",
+            "fieldNameUnderscored": "upd_tms",
+            "fieldInJavaBeanMethod": "UpdTms",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150609075541",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "validation": true
+}

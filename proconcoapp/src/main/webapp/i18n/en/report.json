@@ -1,0 +1,32 @@
+{
+    "proconcoappApp": {
+        "report" : {
+            "home": {
+                "title": "Reports",
+                "createLabel": "Create a new Report",
+                "createOrEditLabel": "Create or edit a Report"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Report {{ id }}?"
+            },
+            "detail": {
+                "title": "Report"
+            },
+            "amt": "Amt",
+            "marketRpt": "MarketRpt",
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday",
+            "delFlag": "DelFlag",
+            "crtUid": "CrtUid",
+            "crtTms": "CrtTms",
+            "updUid": "UpdUid",
+            "updTms": "UpdTms",
+            "reportId": "reportId"
+        }
+    }
+}

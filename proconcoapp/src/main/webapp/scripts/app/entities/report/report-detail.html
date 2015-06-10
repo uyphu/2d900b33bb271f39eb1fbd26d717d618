@@ -1,0 +1,134 @@
+
+<div>
+    <h2><span translate="proconcoappApp.report.detail.title">Report</span> {{report.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.amt">Amt</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.amt}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.marketRpt">MarketRpt</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.marketRpt}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.monday">Monday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.monday}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.tuesday">Tuesday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.tuesday}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.wednesday">Wednesday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.wednesday}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.thursday">Thursday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.thursday}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.friday">Friday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.friday}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.saturday">Saturday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.saturday}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.sunday">Sunday</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.sunday}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.delFlag">DelFlag</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.delFlag}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.crtUid">CrtUid</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.crtUid}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.crtTms">CrtTms</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.crtTms}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.updUid">UpdUid</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.updUid}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.report.updTms">UpdTms</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{report.updTms}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="report"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="proconcoappApp.position.detail.title">Position</span> {{position.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.position.postName">PostName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{position.postName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.position.delFlag">DelFlag</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{position.delFlag}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.position.crtUid">CrtUid</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{position.crtUid}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.position.crtTms">CrtTms</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{position.crtTms}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.position.updUid">UpdUid</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{position.updUid}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.position.updTms">UpdTms</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{position.updTms}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="position"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

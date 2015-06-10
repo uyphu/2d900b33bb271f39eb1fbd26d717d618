@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "proconcoApp",
+    "packageName": "com.proconco.report",
+    "packageFolder": "com/proconco/report",
+    "authenticationType": "oauth2",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "hazelcast",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useCompass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "4734da5b36e0cca2f60197b294b747957bc0caea"
+  }
+}

@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="proconcoappApp.planningWeekId.detail.title">PlanningWeekId</span> {{planningWeekId.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.planningWeekId.week">Week</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{planningWeekId.week}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.planningWeekId.year">Year</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{planningWeekId.year}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="proconcoappApp.planningWeekId.user">user</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{planningWeekId.userId}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="planningWeekId"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

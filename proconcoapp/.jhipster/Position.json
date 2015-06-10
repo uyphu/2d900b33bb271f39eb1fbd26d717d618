@@ -1,0 +1,83 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "postName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PostName",
+            "fieldNameUnderscored": "post_name",
+            "fieldInJavaBeanMethod": "PostName",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "delFlag",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DelFlag",
+            "fieldNameUnderscored": "del_flag",
+            "fieldInJavaBeanMethod": "DelFlag",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": "1",
+            "fieldValidateRulesPattern": "[YN]"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "crtUid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CrtUid",
+            "fieldNameUnderscored": "crt_uid",
+            "fieldInJavaBeanMethod": "CrtUid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "crtTms",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "CrtTms",
+            "fieldNameUnderscored": "crt_tms",
+            "fieldInJavaBeanMethod": "CrtTms",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "updUid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "UpdUid",
+            "fieldNameUnderscored": "upd_uid",
+            "fieldInJavaBeanMethod": "UpdUid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "updTms",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "UpdTms",
+            "fieldNameUnderscored": "upd_tms",
+            "fieldInJavaBeanMethod": "UpdTms",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150609083334",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "validation": true
+}

@@ -1,0 +1,174 @@
+<div>
+
+    <h2 translate="proconcoappApp.groupp.home.title">Groupps</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveGrouppModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="proconcoappApp.groupp.home.createLabel">Create a new Groupp</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Groupp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveGrouppModal" tabindex="-1" role="dialog" aria-labelledby="myGrouppLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myGrouppLabel" translate="proconcoappApp.groupp.home.createOrEditLabel">Create or edit a Groupp</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="groupp.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="proconcoappApp.groupp.grpName">GrpName</label>
+                            <input type="text" class="form-control" name="grpName"
+                                   ng-model="groupp.grpName" required>
+
+                            <div ng-show="editForm.grpName.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.grpName.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.groupp.delFlag">DelFlag</label>
+                            <input type="text" class="form-control" name="delFlag"
+                                   ng-model="groupp.delFlag" required>
+
+                            <div ng-show="editForm.delFlag.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.delFlag.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.groupp.crtUid">CrtUid</label>
+                            <input type="text" class="form-control" name="crtUid"
+                                   ng-model="groupp.crtUid">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.groupp.crtTms">CrtTms</label>
+                            <input type="date" class="form-control" name="crtTms"
+                                   ng-model="groupp.crtTms">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.groupp.updUid">UpdUid</label>
+                            <input type="text" class="form-control" name="updUid"
+                                   ng-model="groupp.updUid">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.groupp.updTms">UpdTms</label>
+                            <input type="date" class="form-control" name="updTms"
+                                   ng-model="groupp.updTms">
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteGrouppConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(groupp.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="proconcoappApp.groupp.delete.question" translate-values="{id: '{{groupp.id}}'}">Are you sure you want to delete this Groupp?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="proconcoappApp.groupp.grpName">GrpName</th>
+                    <th translate="proconcoappApp.groupp.delFlag">DelFlag</th>
+                    <th translate="proconcoappApp.groupp.crtUid">CrtUid</th>
+                    <th translate="proconcoappApp.groupp.crtTms">CrtTms</th>
+                    <th translate="proconcoappApp.groupp.updUid">UpdUid</th>
+                    <th translate="proconcoappApp.groupp.updTms">UpdTms</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="groupp in groupps">
+                    <td><a ui-sref="grouppDetail({id:groupp.id})">{{groupp.id}}</a></td>
+                    <td>{{groupp.grpName}}</td>
+                    <td>{{groupp.delFlag}}</td>
+                    <td>{{groupp.crtUid}}</td>
+                    <td>{{groupp.crtTms}}</td>
+                    <td>{{groupp.updUid}}</td>
+                    <td>{{groupp.updTms}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="grouppDetail({id:groupp.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="showUpdate(groupp.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(groupp.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

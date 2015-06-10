@@ -1,0 +1,22 @@
+{
+    "proconcoappApp": {
+        "planningWeekId" : {
+            "home": {
+                "title": "PlanningWeekIds",
+                "createLabel": "Créer un nouveau PlanningWeekId",
+                "createOrEditLabel": "Créer ou éditer un PlanningWeekId"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le PlanningWeekId {{ id }} ?"
+            },
+            "detail": {
+                "title": "PlanningWeekId"
+            },
+            "week": "Week",
+            "year": "Year",
+            "user": "user",
+            "planningWeek": "planningWeek"
+        }
+    }
+}
+

@@ -1,0 +1,145 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "planningWeekId",
+            "relationshipNameCapitalized": "PlanningWeekId",
+            "relationshipFieldName": "planningWeekId",
+            "otherEntityName": "planningWeekId",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "PlanningWeekId",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "monday",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Monday",
+            "fieldNameUnderscored": "monday",
+            "fieldInJavaBeanMethod": "Monday",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "tuesday",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Tuesday",
+            "fieldNameUnderscored": "tuesday",
+            "fieldInJavaBeanMethod": "Tuesday",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "wednesday",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Wednesday",
+            "fieldNameUnderscored": "wednesday",
+            "fieldInJavaBeanMethod": "Wednesday",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "thursday",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Thursday",
+            "fieldNameUnderscored": "thursday",
+            "fieldInJavaBeanMethod": "Thursday",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "friday",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Friday",
+            "fieldNameUnderscored": "friday",
+            "fieldInJavaBeanMethod": "Friday",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "saturday",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Saturday",
+            "fieldNameUnderscored": "saturday",
+            "fieldInJavaBeanMethod": "Saturday",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "sunday",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Sunday",
+            "fieldNameUnderscored": "sunday",
+            "fieldInJavaBeanMethod": "Sunday",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "delFlag",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DelFlag",
+            "fieldNameUnderscored": "del_flag",
+            "fieldInJavaBeanMethod": "DelFlag",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": "1",
+            "fieldValidateRulesPattern": "[YN]"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "crtUid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CrtUid",
+            "fieldNameUnderscored": "crt_uid",
+            "fieldInJavaBeanMethod": "CrtUid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "crtTms",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "CrtTms",
+            "fieldNameUnderscored": "crt_tms",
+            "fieldInJavaBeanMethod": "CrtTms",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "updUid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "UpdUid",
+            "fieldNameUnderscored": "upd_uid",
+            "fieldInJavaBeanMethod": "UpdUid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "updTms",
+            "fieldType": "String",
+            "fieldNameCapitalized": "UpdTms",
+            "fieldNameUnderscored": "upd_tms",
+            "fieldInJavaBeanMethod": "UpdTms",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": true,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150609091750",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "validation": true
+}

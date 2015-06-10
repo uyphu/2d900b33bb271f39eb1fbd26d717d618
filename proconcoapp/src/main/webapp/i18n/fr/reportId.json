@@ -1,0 +1,22 @@
+{
+    "proconcoappApp": {
+        "reportId" : {
+            "home": {
+                "title": "ReportIds",
+                "createLabel": "Créer un nouveau ReportId",
+                "createOrEditLabel": "Créer ou éditer un ReportId"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le ReportId {{ id }} ?"
+            },
+            "detail": {
+                "title": "ReportId"
+            },
+            "week": "Week",
+            "year": "Year",
+            "user": "user",
+            "report": "report"
+        }
+    }
+}
+

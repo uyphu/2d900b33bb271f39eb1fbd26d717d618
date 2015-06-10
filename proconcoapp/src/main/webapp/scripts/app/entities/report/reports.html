@@ -1,0 +1,264 @@
+<div>
+
+    <h2 translate="proconcoappApp.report.home.title">Reports</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveReportModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="proconcoappApp.report.home.createLabel">Create a new Report</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Report</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveReportModal" tabindex="-1" role="dialog" aria-labelledby="myReportLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myReportLabel" translate="proconcoappApp.report.home.createOrEditLabel">Create or edit a Report</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="report.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.amt">Amt</label>
+                            <input type="number" class="form-control" name="amt"
+                                   ng-model="report.amt" required min="0">
+
+                            <div ng-show="editForm.amt.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.amt.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.amt.$error.min" translate="entity.validation.min" translate-value-min="0">
+                                    This field should be more than 0.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.amt.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.marketRpt">MarketRpt</label>
+                            <input type="text" class="form-control" name="marketRpt"
+                                   ng-model="report.marketRpt" required>
+
+                            <div ng-show="editForm.marketRpt.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.marketRpt.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.monday">Monday</label>
+                            <input type="text" class="form-control" name="monday"
+                                   ng-model="report.monday">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.tuesday">Tuesday</label>
+                            <input type="text" class="form-control" name="tuesday"
+                                   ng-model="report.tuesday">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.wednesday">Wednesday</label>
+                            <input type="text" class="form-control" name="wednesday"
+                                   ng-model="report.wednesday">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.thursday">Thursday</label>
+                            <input type="text" class="form-control" name="thursday"
+                                   ng-model="report.thursday">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.friday">Friday</label>
+                            <input type="text" class="form-control" name="friday"
+                                   ng-model="report.friday">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.saturday">Saturday</label>
+                            <input type="text" class="form-control" name="saturday"
+                                   ng-model="report.saturday">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.sunday">Sunday</label>
+                            <input type="text" class="form-control" name="sunday"
+                                   ng-model="report.sunday">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.delFlag">DelFlag</label>
+                            <input type="text" class="form-control" name="delFlag"
+                                   ng-model="report.delFlag" required ng-minlength="1" ng-maxlength="1" ng-pattern="/[YN]/">
+
+                            <div ng-show="editForm.delFlag.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.delFlag.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.delFlag.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                                    This field is required to be at least 1 characters.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.delFlag.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="1">
+                                    This field cannot be longer than 1 characters.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.delFlag.$error.pattern" translate="entity.validation.pattern" translate-value-pattern="[YN]">
+                                    This field should follow pattern "[YN]".
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.crtUid">CrtUid</label>
+                            <input type="text" class="form-control" name="crtUid"
+                                   ng-model="report.crtUid">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.crtTms">CrtTms</label>
+                            <input type="date" class="form-control" name="crtTms"
+                                   ng-model="report.crtTms">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.updUid">UpdUid</label>
+                            <input type="text" class="form-control" name="updUid"
+                                   ng-model="report.updUid">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="proconcoappApp.report.updTms">UpdTms</label>
+                            <input type="date" class="form-control" name="updTms"
+                                   ng-model="report.updTms">
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteReportConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(report.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="proconcoappApp.report.delete.question" translate-values="{id: '{{report.id}}'}">Are you sure you want to delete this Report?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="proconcoappApp.report.amt">Amt</th>
+                    <th translate="proconcoappApp.report.marketRpt">MarketRpt</th>
+                    <th translate="proconcoappApp.report.monday">Monday</th>
+                    <th translate="proconcoappApp.report.tuesday">Tuesday</th>
+                    <th translate="proconcoappApp.report.wednesday">Wednesday</th>
+                    <th translate="proconcoappApp.report.thursday">Thursday</th>
+                    <th translate="proconcoappApp.report.friday">Friday</th>
+                    <th translate="proconcoappApp.report.saturday">Saturday</th>
+                    <th translate="proconcoappApp.report.sunday">Sunday</th>
+                    <th translate="proconcoappApp.report.delFlag">DelFlag</th>
+                    <th translate="proconcoappApp.report.crtUid">CrtUid</th>
+                    <th translate="proconcoappApp.report.crtTms">CrtTms</th>
+                    <th translate="proconcoappApp.report.updUid">UpdUid</th>
+                    <th translate="proconcoappApp.report.updTms">UpdTms</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="report in reports">
+                    <td><a ui-sref="reportDetail({id:report.id})">{{report.id}}</a></td>
+                    <td>{{report.amt}}</td>
+                    <td>{{report.marketRpt}}</td>
+                    <td>{{report.monday}}</td>
+                    <td>{{report.tuesday}}</td>
+                    <td>{{report.wednesday}}</td>
+                    <td>{{report.thursday}}</td>
+                    <td>{{report.friday}}</td>
+                    <td>{{report.saturday}}</td>
+                    <td>{{report.sunday}}</td>
+                    <td>{{report.delFlag}}</td>
+                    <td>{{report.crtUid}}</td>
+                    <td>{{report.crtTms}}</td>
+                    <td>{{report.updUid}}</td>
+                    <td>{{report.updTms}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="reportDetail({id:report.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="showUpdate(report.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(report.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

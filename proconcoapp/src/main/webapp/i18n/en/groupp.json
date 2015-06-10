@@ -1,0 +1,23 @@
+{
+    "proconcoappApp": {
+        "groupp" : {
+            "home": {
+                "title": "Groupps",
+                "createLabel": "Create a new Groupp",
+                "createOrEditLabel": "Create or edit a Groupp"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Groupp {{ id }}?"
+            },
+            "detail": {
+                "title": "Groupp"
+            },
+            "grpName": "GrpName",
+            "delFlag": "DelFlag",
+            "crtUid": "CrtUid",
+            "crtTms": "CrtTms",
+            "updUid": "UpdUid",
+            "updTms": "UpdTms"
+        }
+    }
+}

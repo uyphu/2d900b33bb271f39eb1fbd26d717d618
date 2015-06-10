@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity PlanningWeekId.
+    -->
+    <changeSet id="20150609091125" author="jhipster">
+        <createTable tableName="PLANNINGWEEKID">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="week" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="year" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="user_id" type="bigint"/>
+            <column name="planningweek_id" type="bigint"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="PLANNINGWEEKID"
+                                 constraintName="fk_planningweekid_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="JHI_USER"/>
+
+        <addForeignKeyConstraint baseColumnNames="planningweek_id"
+                                 baseTableName="PLANNINGWEEKID"
+                                 constraintName="fk_planningweekid_planningweek_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="PLANNINGWEEK"/>
+
+    </changeSet>
+</databaseChangeLog>

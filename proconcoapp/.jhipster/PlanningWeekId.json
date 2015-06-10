@@ -1,0 +1,70 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "user",
+            "relationshipNameCapitalized": "User",
+            "relationshipFieldName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "User",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "planningWeek",
+            "relationshipNameCapitalized": "PlanningWeek",
+            "relationshipFieldName": "planningWeek",
+            "otherEntityName": "planningWeek",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "PlanningWeek",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "week",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Week",
+            "fieldNameUnderscored": "week",
+            "fieldInJavaBeanMethod": "Week",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "1",
+            "fieldValidateRulesMax": "52"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "year",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Year",
+            "fieldNameUnderscored": "year",
+            "fieldInJavaBeanMethod": "Year",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "1970",
+            "fieldValidateRulesMax": "9999"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": true,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150609091125",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "validation": true
+}

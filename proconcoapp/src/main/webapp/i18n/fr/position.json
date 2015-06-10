@@ -1,0 +1,24 @@
+{
+    "proconcoappApp": {
+        "position" : {
+            "home": {
+                "title": "Positions",
+                "createLabel": "Créer un nouveau Position",
+                "createOrEditLabel": "Créer ou éditer un Position"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Position {{ id }} ?"
+            },
+            "detail": {
+                "title": "Position"
+            },
+            "postName": "PostName",
+            "delFlag": "DelFlag",
+            "crtUid": "CrtUid",
+            "crtTms": "CrtTms",
+            "updUid": "UpdUid",
+            "updTms": "UpdTms"
+        }
+    }
+}
+

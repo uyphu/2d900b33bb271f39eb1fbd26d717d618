@@ -1,0 +1,30 @@
+{
+    "proconcoappApp": {
+        "planningWeek" : {
+            "home": {
+                "title": "PlanningWeeks",
+                "createLabel": "Create a new PlanningWeek",
+                "createOrEditLabel": "Create or edit a PlanningWeek"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete PlanningWeek {{ id }}?"
+            },
+            "detail": {
+                "title": "PlanningWeek"
+            },
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday",
+            "delFlag": "DelFlag",
+            "crtUid": "CrtUid",
+            "crtTms": "CrtTms",
+            "updUid": "UpdUid",
+            "updTms": "UpdTms",
+            "planningWeekId": "planningWeekId"
+        }
+    }
+}
